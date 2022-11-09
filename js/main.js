@@ -19,7 +19,8 @@ import LightBox from './components/TheLightbox.js';
         data() {
             return {
                 heroData: {},
-                lbData: {}
+                lbData: {},
+                showLB: false
             }
         },
 
@@ -30,7 +31,11 @@ import LightBox from './components/TheLightbox.js';
 
         methods: {
             loadLightbox(hero) {
+                // set the lightbox data / render it
                 this.lbData = hero;
+
+                //show the lightbox
+                this.showLB = true;
             }
         }
 

@@ -23,7 +23,7 @@
         <nav id="character-nav">
             <ul class="characters">
                 <!-- hero thumb component goes here -->
-                <theherothumb @loadlbdata="loadLightbox" v-for="hero in heroData" :hero="hero"></theherothumb> <!-- represents TheHeroThumbnauil.js -->
+                <theherothumb @loadlbdata="loadLightbox" v-for="hero in heroData" :hero="hero"></theherothumb> <!-- represents TheHeroThumbnail.js -->
 
             </ul>
         </nav>
@@ -34,7 +34,7 @@
         </article>
 
         <!-- custom lightbox component here -->
-        <thelightbox></thelightbox>
+        <thelightbox @closelb="this.showLB = false" v-if="showLB" :hero="lbData"></thelightbox>
         <!-- end lightbox -->
     </main>
     <!-- make this a sticky footer so it's always at the bottom-->
